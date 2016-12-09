@@ -1,0 +1,34 @@
+<html ng-app="NewsRoom">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="./public/vendor.css">
+	<link rel="stylesheet" href="./public/app.css">
+
+	<script type="text/javascript" src="./public/vendor.js"></script>
+</head>
+<body ng-controller="AppController as app" layout="row" layout-align="center start"  ng-cloak layout-wrap flex>
+	<!-- Do something here -->
+	<md-content
+		layout-padding
+		class="md-whiteframe-1dp"
+		flex="100"
+		flex-gt-sm="70"
+		flex-gt-md="50">
+		<h4 class="no-mg-bt">News Room</h4>
+		<md-nav-bar md-selected-nav-item="app.currentPage" nav-bar-aria-label="navigation links">
+			<md-nav-item md-nav-click="app.navigateToHome()" name="Home">Home</md-nav-item>
+			<md-nav-item md-nav-click="app.navigateToNews()" name="News">News</md-nav-item>
+		</md-nav-bar>
+		<div class="ext-content">
+			<div ng-view></div>
+		</div>
+	</md-content>
+
+	<script type="text/javascript" src="./public/app.js"></script>
+	<script type="text/javascript" src="./public/pages.js"></script>
+
+</body>
+</html>

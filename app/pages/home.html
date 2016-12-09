@@ -1,0 +1,6 @@
+<h4>Top News</h4>
+<md-divider></md-divider>
+<md-card role="button" md-theme="article" ng-repeat="article in ctrl.topArticles" ng-click="ctrl.openNews(article)" layout-padding class="md-whiteframe-1dp">
+	<div layout="row"><strong>{{ article.title }}</strong></div>
+	<div layout="row">{{ article.description | limitTo: 100 }} ...</div>
+</md-card>

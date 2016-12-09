@@ -1,0 +1,21 @@
+<div layout="row" flex>
+	<h4>Article Form</h4>
+	<div flex></div>
+	<md-button ng-if="ctrl.isCreating" ng-click="ctrl.save(ctrl.article)" ng-disabled="article.$invalid">Save</md-button>
+</div>
+<form name="article">
+	<md-input-container class="md-block">
+		<label>Title</label>
+		<input name="title" required ng-model="ctrl.article.title">
+		<div ng-messages="article.title.$error">
+			<div ng-message="required">This field is required</div>
+		</div>
+	</md-input-container>
+	<md-input-container class="md-block">
+		<label>Description</label>
+		<textarea name="description" required ng-model="ctrl.article.description" md-maxlength="500" rows="3" md-select-on-focus></textarea>
+		<div ng-messages="article.title.$error">
+			<div ng-message="required">This field is required</div>
+		</div>
+	</md-input-container>
+</form>

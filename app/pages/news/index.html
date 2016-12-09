@@ -1,0 +1,10 @@
+<div layout="row" flex>
+	<h4>Article List</h4>
+	<div flex></div>
+	<md-button ng-click="ctrl.newArticle()">New</md-button>
+</div>
+<md-divider></md-divider>
+<md-card role="button" md-theme="article" ng-repeat="article in ctrl.news" ng-click="ctrl.openNews(article)" layout-padding class="md-whiteframe-1dp">
+	<div layout="row"><strong>{{ article.title }}</strong></div>
+	<div layout="row">{{ article.description | limitTo: 100 }} ...</div>
+</md-card>

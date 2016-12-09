@@ -1,0 +1,10 @@
+<div layout="row" flex>
+	<h4>Article Details</h4>
+	<div flex></div>
+	<md-button ng-click="ctrl.editArticle(ctrl.article.id)">Edit</md-button>
+</div>
+<md-divider></md-divider>
+<md-card md-theme="article" layout-padding class="md-whiteframe-1dp">
+	<div layout="row"><strong>{{ ctrl.article.title }}</strong></div>
+	<div layout="row">{{ ctrl.article.description }}</div>
+</md-card>
